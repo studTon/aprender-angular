@@ -340,7 +340,7 @@
         </g>
       </g>
     </svg>
-
+    
     <span>{{ title }} app is running!</span>
 	  
 	
@@ -351,7 +351,10 @@
     </svg>
 
   </div>
-	 <app-data-binding></app-data-binding>
+    <app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+    <app-data-binding></app-data-binding>
+    <button (click)="mudarValor()">Mudar valor</button>
+    <button (click)="destruirCiclo()">Deletar</button>
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
