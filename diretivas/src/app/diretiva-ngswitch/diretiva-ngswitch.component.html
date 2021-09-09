@@ -27,5 +27,14 @@
 <div class="container" [ngSwitch]="aba">
   <p *ngSwitchCase="'mapa'">Modo mapa ativado</p>
   <p *ngSwitchCase="'link'">Modo link ativado</p>
-  <p *ngSwitchCase="'home'">Modo home ativado</p>
+  <p *ngSwitchDefault="'home'">Modo home ativado</p>
+</div>
+
+<h5>Removendo * e usando template/h5>
+<div class="container" [ngSwitch]="aba">
+  <template [ngSwitchCase]="'mapa'">
+    <p>Modo mapa ativado</p>
+  </template>
+  <template [ngSwitchCase]="'link'"><p>Modo link ativado</p></template>
+  <template [ngSwitchCase]="'home'" ngSwitchDefault><p>Modo home ativado</p></template>
 </div>
