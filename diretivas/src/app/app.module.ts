@@ -11,6 +11,7 @@ import { NgclassComponent } from './ngclass/ngclass.component';
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { FormsModule } from '@angular/forms';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { ExemploNgcontentComponent } from './exemplo-ngcontent/exemplo-ngcontent.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
     DiretivaNgforComponent,
     NgclassComponent,
     DiretivaNgstyleComponent,
-    OperadorElvisComponent
+    OperadorElvisComponent,
+    ExemploNgcontentComponent
   ],
   imports: [
     BrowserModule,
