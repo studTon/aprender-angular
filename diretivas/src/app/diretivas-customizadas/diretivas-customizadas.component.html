@@ -4,3 +4,18 @@
 <p appHighlightMouse> Texto com highlight quando passa o mouse</p>
 
 <p appHighlight [defaultColor]="'gray'" [highlightColor]="'red'">Texto com highlight com cores customizadas</p>
+
+<h5>Diretiva estrutura customizada - ngElse</h5>
+
+<div *ngIf="mostrarCursos">
+    <p>Lista de cursos aqui.</p>
+</div>
+<br>
+<div *ngElse="mostrarCursos"><p>Não existem cursos</p></div>
+
+<br>
+<button (click)=onMostrarCursos()>Mostrar ou esconder cursos</button>
+<br>
+<template [ngElse]="mostrarCursos">
+    <div><p>Não existem cursos para serem listados</p></div>
+</template>
