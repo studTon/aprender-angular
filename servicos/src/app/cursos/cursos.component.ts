@@ -4,11 +4,12 @@ import { CursosService } from './cursos.service';
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
+  providers: [CursosService]
 })
 export class CursosComponent implements OnInit {
   cursos: string[] = [];
-  //cursosService: CursosService;
+  cursosService!: CursosService;
   constructor(private _cursosService: CursosService) { 
     //this.cursosService = new CursosService();
     //this.cursosService = _cursosService;
@@ -18,4 +19,7 @@ export class CursosComponent implements OnInit {
     this.cursos = this._cursosService.getCursos();
   }
 
+  onAddCurso(curso: string){
+    this.cursosService.addCurso(curso);
+  }
 }
