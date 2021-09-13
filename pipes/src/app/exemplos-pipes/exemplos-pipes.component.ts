@@ -20,7 +20,17 @@ export class ExemplosPipesComponent implements OnInit {
 
   filtro: any;
   constructor() { }
+  obterCursos(){
+    if(this.livros.length === 0 || this.filtro === null || this.filtro.trim() === '')
+      return this.livros;
 
+      return this.livros.filter((v) => {
+        if(v.toLowerCase().indexOf(this.filtro.toLowerCase())>= 0){
+          return true;
+        }
+        return false;
+      })
+  }
   addCurso(valor:any){
     this.livros.push(valor);
   }
